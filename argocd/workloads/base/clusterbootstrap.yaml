@@ -1,0 +1,21 @@
+apiVersion: run.tanzu.vmware.com/v1alpha3
+kind: ClusterBootstrap
+metadata:
+  annotations:
+    tkg.tanzu.vmware.com/add-missing-fields-from-tkr: v1.25.7---vmware.2-tkg.1
+  name: base
+  namespace: default
+spec:
+  additionalPackages:
+  - refName: metrics-server*
+  - refName: secretgen-controller*
+  - refName: pinniped*
+  cpi:
+    refName: vsphere-cpi*
+    valuesFrom:
+      providerRef:
+        apiGroup: cpi.tanzu.vmware.com
+        kind: VSphereCPIConfig
+        name: base
+  kapp:
+    refName: kapp-controller*
