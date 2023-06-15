@@ -1,0 +1,3 @@
+- op: replace
+  path: /spec/cpi/valuesFrom/providerRef/name
+  value: workload01
