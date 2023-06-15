@@ -1,0 +1,9 @@
+- op: replace
+  path: /metadata/annotations/tkg.tanzu.vmware.com~1cluster-controlplane-endpoint
+  value: workload02-base-vip.tta.lab
+- op: replace
+  path: /metadata/labels/tkg.tanzu.vmware.com~1cluster-name
+  value: workload02-base
+- op: replace
+  path: /spec/topology/variables/4/value
+  value: workload02-base-vip.tta.lab
