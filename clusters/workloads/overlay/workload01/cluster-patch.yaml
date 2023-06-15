@@ -3,7 +3,7 @@
   value: workload01-vip.tta.lab
 - op: replace
   path: /metadata/labels/tkg.tanzu.vmware.com~1cluster-name
-  value: workload01
+  value: workload01-base
 - op: replace
   path: /spec/topology/variables/4/value
   value: workload01-vip.tta.lab
